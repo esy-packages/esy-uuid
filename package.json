@@ -11,9 +11,11 @@
       }
     },
     "build": [
-      "bash",
-      "-c",
-      "#{os == 'windows' ? 'echo Warning: No Windows support': './build.sh'}"
+      [
+        "bash",
+        "-c",
+        "#{os == 'windows' ? 'echo Warning: No Windows support': './build.sh'}"
+      ]
     ]
   },
   "dependencies": {},
