@@ -1,0 +1,21 @@
+{
+  "name": "esy-uuid",
+  "version": "1.6.2000",
+  "description": "uuid (OSSP) packaged for esy. Pulled from https://deb.debian.org/debian/pool/main/o/ossp-uuid/ossp-uuid_1.6.2.orig.tar.gz",
+  "esy": {
+    "buildsInSource": true,
+    "exportedEnv": {
+      "PKG_CONFIG_PATH": {
+        "scope": "global",
+        "val": "#{self.lib / 'pkgconfig' :  }"
+      }
+    },
+    "build": [
+      "bash",
+      "-c",
+      "#{os == 'windows' ? 'echo Warning: No Windows support': './build.sh'}"
+    ]
+  },
+  "dependencies": {},
+  "resolutions": {}
+}
